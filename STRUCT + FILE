@@ -1,0 +1,513 @@
+//khai bao struct
+struct Person{  //struct person: kieu du lieu
+char name[50];
+int age;
+double salary;	
+};
+//tao 1 bien kieu Struct person
+int main()
+{
+	//khoi tao bien struct
+	struct Person Lan;
+	struct Person Mai;
+}
+
+//truy cap bien thanh vien cua struct ( dung toan tu ".")
+// gia su muon gan 25 cho thanh phan age
+Lan.age = 25;
+
+//Vi du 1 ve struct
+#include <stdio.h>
+//tao struct
+struct Person{
+	char name[50];
+	int age;
+	double salary;
+};
+int main()
+{
+	//khai bao bien cho struct
+	struct Person Lan;
+	
+	//gan gia tri cho bien
+	Lan.age =25;
+	Lan.salary = 3465.78;
+	//in thanh vien struct
+	printf("Age:%d",Lan.age);
+	printf("\nSalary:%.2lf",Lan.salary);
+	return 0;
+	
+}
+
+
+/* CHUNG TA CO THE KHONG CAN CHO //KHAI BAO BIEN CHO STRUCT//
+struct Person{
+	char name[50];
+	int age;
+	double salary;
+}Lan; 
+*/
+
+
+
+//khai bao  va Khoi tao bien struct
+//khai bao gop voi khoi tao
+struct Person Lan = {.age = 25, .name ="Linh"};
+};
+
+// su dung typedef   thi khi khai bao khong can struct person ma chi can person
+typedef struct Person{
+	int age;
+}person;
+int main()
+{
+	//khai bao bien bang bi danh
+	person p1,p2;
+}
+
+
+/*
+Lỗi thường gặp với typedef
+Xem đoạn code sau:
+
+typedef struct Person {
+  int age;
+} person1, person2;
+Ở đây, person1 và person2 không phải là biến struct. Thay vào đó, cả hai đều là bí danh của struct Person.
+
+sua lai:
+struct Person {
+  int age;
+} person1, person2;
+
+*/
+
+
+
+
+
+vi du 1 ne Hãy xây dựng chương trình tính tổng hai số phức, 10.1 + 9.4i và 28.9 + 4.3i, bằng kiểu struct. Biết rằng tổng của hai số phức  
+39.00 + 13.70i
+#include <stdio.h>
+ 
+typedef struct Complex {
+  double real;
+  double imag;
+} complex;
+ 
+int main() {
+ 
+  // khai báo biến
+  complex c1 = { .real =10.1  , .imag =9.4 };
+  complex c2 = { .real =28.9   , .imag =4.3 };
+  complex result;
+ 
+  // tính tổng phần thực và phần ảo
+  result.real =  c1. real + c2.real;
+  result.imag =  c1.imag  + c2.imag;
+ 
+  printf("%.2lf + %.2lfi", result.real, result .imag);
+ 
+  return 0;
+}
+
+
+
+
+
+
+//** ÔN TẬP STRUCT VÀ CON TRỎ **//
+Ví dụ
+int number =33;
+//con trỏ chứa địa chỉ
+int* pt= &number;
+// in ra địa chỉ 
+printf("%p\n",pt); //0x7ffd323dc88c
+//in ra gia tri bang c tro
+printf("%d",*pt);  //33
+
+
+//STRUCT VA CON TRO
+typedef struct Person{
+	int age;
+	double salary;
+}person;
+int main()
+{
+	//khai bao va khoi tao 1 bien
+	person person1 ={ .age = 25 , .salary = 51345.66 };
+	 
+	 // bien con tro
+	 person* pt;
+	 // gan dia chi cho con tro
+	 pt = &person1;
+	 
+	 //truy cap thanh vien bang con tro 
+	 printf("Age: %d\n", pt -> age);     //pt -> age tuong duong *pt.age
+	 printf("Salary: %.2lf",pt -> salary);    //pt -> salary tuong duong *pt.salary
+Lưu ý: Việc sử dụng -> làm cho cú pháp code rõ ràng hơn, còn thực ra không có sự khác biệt lớn giữa việc sử dụng một trong hai cách.
+
+Bây giờ chúng ta đã biết ý nghĩa của cú pháp này, hãy xem điều gì sẽ xảy ra trong chương trình.
+
+*pt truy cập giá trị được trỏ bởi pt (person1)
+vì vậy pt -> age truy cập biến age của person1
+và pt -> age truy cập biến salary của person1	 
+}
+
+
+//TRUYỀN STRUCT LÀM THAM SỐ ĐẦU VÀO CHO HÀM
+ struct Student {
+ 	char name[50];
+ 	int age;
+ };
+ int main(){
+ 	struct Student std1;
+ 	int a1;
+ 	//truyền vào hàm 1 biến struct 
+ 	void display(struct Student s1)
+ 	{
+	 }
+	 // cũng tương đương với truyền vào hàm 1 biến số nguyên
+	 void display (int a1)
+	 {
+	 }
+ }
+
+//FILE VÀ XỬ LÝ FILE
+BA BƯỚC LÀM VIỆC VỚI FILE
+B1: MỞ FILE
+B2: THAO TÁC VỚI FILE
+B3: ĐÓNG FILE
+
+*BƯỚC 1 : MỞ FILE (sử dụng con trỏ FILE để mở)
+FILE* fptr;
+// sủ dụng fopen() tích hợp sẵn để mở file
+giả sử có message.txt
+fptr = fopen("message.txt","r");    // r: read : chỉ đọc mà không thao tác gì
+// w: write  viết
+/ trong khi mở file ở chế độ đọc chúng ta cần đảm bảo file tồn tại ở vị trí đã chỉ định , nếu không hàm fopen() sẽ trả về NULL
+vidu: không có file abc.text vẫn cố gắng mở
+FILE* fptr;
+fptr = fopen("message.txt", "r");
+if(fptr == NULL)
+{
+	printf("File opening is unsuccessful");
+}
+
+//ĐỌC NỘI DUNG FILE (ĐỌC BẰNG FGETS())
+int main()
+{
+	FILE* fptr;
+	fptr = fopen("message.txt", "r");
+	// mảng để lưu dữ liệu
+	char fileContent[1000];
+	//kiểm tra xem file đã mở thành công chưa
+	if(fptr != NULL)
+	{
+		//đọc file
+		fgets(fileContent, 1000 ,fptr);   // fgets(tên mảng đã lưu, số lượng kí tự, tên fle
+		printf("%s", fileContent);
+	}else
+	{
+		printf("File opening is unsuccessful");
+	}
+return 0;	
+}
+//tuy nhiên file cũng chứa 1 số dữ liệu khác do hàm fgets() chỉ đọc 1 dòng mỗi lần nên nó chỉ đọc dòng đầu tiên
+//Nếu cần đọc tất cả nội dung của File, chúng ta có thể sử dụng một vòng lặp
+
+ĐỌC TỪNG DÒNG FILE
+int main()
+{
+	FILE* fptr;
+	fptr = fopen("message.txt", "r");
+	// mảng để lưu dữ liệu
+	char fileContent[1000];
+	if(fptr!=NULL)
+	{
+		while(fgets(fileContent,1000, fptr))
+		{
+			printf("%s",fileContent);
+		}
+	}
+	else
+	{
+		printf("File opening is unsuccessful");
+	}
+	return 0;
+}
+
+
+TUY NHIÊN nếu hàm fgets đọc mà gặp End-of-File, code sẽ trả về NULL và điều kiện trở thành false, kết thúc vòng lặp
+
+
+//ĐÓNG FILE (fclose())
+fclose(fptr);
+
+//GHI NỘI DUNG VÀO FILE ( để chế độ "w" trong fopen) (Sử dụng fputs() để ghi ndung vào)
+có hai điều kiện khi ghi file
++Nếu mở 1 file không tồn tại, 1 file mới sẽ được tạo
++ nếu file đã tồn tại, nội dung cũ bị xóa và nội dung mới được thêm vào
+
+ int main()
+ {
+ 	//khao bao file
+ 	FILE* fptr;
+ 	//mo file
+ 	fptr = fopen("message.txt", "w");
+ 	 //ghi nội dung vào
+ 	 fputs("C is mother of all programming languages",fptr);
+ 	 fputs("I love C Programming", fptr);
+ 	 // đóng file
+ 	 fclose(fptr);
+ }
+ 
+ //vì message.txt không tồn tại, code tạo message.txt và nội dung của file sẽ là nội dung mà ta đã chỉ định bên trong hàm fputs()
+ // thêm dòng mới bằng cahcs sử dụng kí tự xuống dòng "\n"
+ // nếu file đã tồn tại ( được tạo bởi chương trình trước) thì code sẽ xóa nội dung cũ của file và nội dung mới được ghi vào
+ !!!!CHÚ Ý : HÃY CẨN THẬN KHI LÀM VIỆC VỚI FILE, VÔ TÌNH SẼ BỊ XÓA DỮ LIỆU CŨ MÀ KHÔNG HỀ HAY BIẾT
+ 
+ 
+ //NỐI THÊM NỘI DUNG VÀO FILE (sử dụng "a" thay "r", "w" cho chế độ nối)
+ cách thức hoạt động của chế độ nối
+ +Nếu nối thêm nội dung vào một file không tồn tại, 1 file mới sẽ được tạo
+ +Nếu file đã tồn tại, dũ liệu mới được thêm vào sẽ được thêm vào cuối file mà không xóa dữ liệu trước đó
+ int main()
+ {
+ 	FILE* fptr;
+ 	fopen("message.txt","a");
+ 	//thêm nội dung
+ 	fputs("Appending data using the fputs() function.", fptr);
+ 	//đóng file
+ 	fclosr(fptr);
+ }
+ 
+ 
+ 
+ //TRUY CẬP FILE TỪ THƯ MỤC KHÁC
+ bình thường : fopen() trực tiếp tên file ( các chương trình này chỉ hoạt động nếu file chương trình và file mà chúng ta truy cập nằm trong cùng một thư mục)
+Nếu truy cập 1 file nằm trong thư mực khác, chúng ta pải CUNG CẤP TÊN THƯ MỤC
+
+/giả sử chúng ta có cấu trúc thư mục như sau:
+main.c          //file main.c và thư mục extermal nằm trng cùng 1 thư mục và file message.txt nằm trong thư mục extermal
+external
+  - messages.txt
+  
+  
+  nếu cần truy cập file message.txt từ main.c:
+  	int main()
+  	{
+  		FILE* fptr;
+  		//
+  		fptr= fopen("external/exmessage.txt", "w");
+  		//ghi file
+  		fputs("This file is inside the external folder.",fptr);
+  		fclose(fptr);
+  		return 0;
+	  }
+	 chạy chương trình nó hiện external > message.txt
+	 
+	 chú ý fopen("thư mục / tên file.txt"," model");  //có thể truy cập bất kì file nào từ chương trình bằng cách cung cấp đường dẫn file 
+   
+   
+   
+   //Ôn tập
+   Hàm
+
+Tính năng
+
+fopen("message.txt", "r");
+
+Mở file chỉ đọc
+
+fopen("message.txt", "w");
+
+Mở file và ghi mới dữ liệu
+
+fopen("message.txt", "a");
+
+Mở file và ghi tiếp dữ liệu
+
+fgets(fileContent, 1000, fptr);
+
+Đọc file, dữ liệu được lưu tại biến fileContent
+
+fputs(fileContent, fptr);
+
+Ghi dữ liệu fileContent vào tệp fptr
+
+fclose(fptr);
+
+//Ngoài ra dưới đây là tổng hợp về kết hợp mở tệp và sử dụng theo từng tác vụ yêu cầu:
+
+#include <stdio.h>
+
+int main() {
+
+  FILE* fptr;
+  // mở file để đọc
+  fptr = fopen("message.txt", "r");
+
+  // mảng để lưu dữ liệu
+  char fileContent[1000];
+  
+  // kiểm tra file mở thành công chưa
+  if(fptr != NULL) {
+    // đọc file
+    while(fgets(fileContent, 1000, fptr)) {
+      printf("%s", fileContent);
+    }
+  }
+  else {
+    printf("Không mở được File");
+  }
+
+  // đóng file
+  fclose(fptr);
+  
+
+// mở file để ghi đè
+  fptr = fopen("filewrite.txt", "w");
+
+  // kiểm tra file mở thành công chưa
+  if(fptr != NULL) {
+    // viết file
+    fputs("I love Tek4.vn", fptr);
+  }
+  else {
+    printf("Không mở được File");
+  }
+  
+  // đóng file
+  fclose(fptr);
+  // mở file để ghi nối thêm nội dung
+  fptr = fopen("fileadd.txt", "a");
+
+  // kiểm tra file mở thành công chưa
+  if(fptr != NULL) {
+    // viết file
+    fputs("I love Tek4.vn\n", fptr);
+    fputs("Học lập trình C cơ bản đến nâng cao với Tek4.vn", fptr);
+  }
+  else {
+    printf("Không mở được File");
+  }
+  
+  // đóng file
+  fclose(fptr);
+  
+  return 0;
+}
+
+//DỮ LIỆU ENUM
+enum hoặc enumeration : kiểu dữ liệu có 1 tập hợp các hằng số cố định
+ví dụ :
+	enum Days {   // từ khóa enum để tạo 1 enum có tên Days
+		Sunday,
+		Monday,
+		Tuesday,
+		Wednesday,
+		Thursday,
+		Friday,
+		Saturday
+	};
+	
+	//tạo biến enum
+	sau khi khai báo 1 enum, chúng ta có thể tạo các biến từ enum
+	enum Days currentDay; //currentday là 1 biến kiểu enum
+	
+	//gán giá trị cho biến Enum
+	biến enum chỉ có thể nhận 1 trong các hằng số được xác định bên trong enum
+	vidu 
+	currentDay = Friday;
+	
+	
+	// hằng số tích phân enum
+	theo mặc định , giá trị Sunday là 0, Monday là 1 , Tuesday là 2.....
+	
+	#include <stdio.h>
+	enum Days{
+		Sunday,
+		Monday,
+		Tuesday,
+		Wednesday,
+		Thursday,
+		Friday,
+		Saturday
+	};
+	int main()
+	{
+		//tạo biến
+		enum Days currentDay;
+		//gán biến
+		currentDay = Friday;
+		//in ra màn hình
+		printf("%d", currentDay); //5   // hằng số đại diện cho enum Friday
+		return 0;
+	}
+	
+	Ví dụ: Bộ bài
+Trong ví dụ này, chúng ta sẽ tạo một enum chứa các quân bài dưới dạng hằng số.
+
+#include <stdio.h>
+ 
+enum Suit {
+  clubs,
+  diamonds,
+  hearts,
+  spades
+};
+ 
+int main() {
+  
+  // khởi tạo biến
+  enum Suit card = hearts;
+ 
+  switch(card) {
+    case clubs:
+      printf("Card is clubs");
+      break;
+    case diamonds:
+      printf("Card is diamonds");
+      break;
+    case hearts:
+      printf("Card is hearts");
+      break;
+    case spades:
+      printf("Card is spades");
+      break;
+  }
+ 
+  return 0;
+}
+
+
+//Chúng ta biết rằng một quân bài chỉ có thể có một trong bốn chất: rô, cơ bích, tép. Đó là lý do tại sao chúng ta sử dụng enums.
+
+Mẹo: Nếu bạn chắc chắn rằng một biến chỉ có thể lưu trữ một số lượng giá trị giới hạn thì tốt nhất là sử dụng enums.
+
+Bổ sung thêm về enum
+Chúng ta có thể tạo biến enum trong khi khai báo enum. Ví dụ:
+
+#include <stdio.h>
+ 
+enum Size {
+  Small,
+  Medium,
+  Large
+} size;
+ 
+int main() {
+ 
+  size = Small;
+  printf("%d", size);    // 0
+ 
+  return 0;
+}
+Ở đây, size là một biến enum chỉ có thể lưu trữ một trong 3 giá trị.
+
+Khi nào nên sử dụng enums
+Biến enum chỉ có thể lấy một trong số một tập hợp nhỏ các giá trị có thể.
+
+Nếu chúng ta biết tất cả các giá trị khả thi mà một biến có thể nhận thì tốt hơn hết là sử dụng enums. Điều này giúp bạn viết code dễ đọc hiểu hơn.
+
