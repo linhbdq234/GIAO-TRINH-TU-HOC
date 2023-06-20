@@ -1,0 +1,159 @@
+#bai tap xau ki tu
+1, tinh do dai xau ma khong dung xau co san
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+int length(char a[])
+{
+	int i=0;
+	for(;a[i];i++);   // a[i] != '0'
+	return i;
+}
+int main()
+{
+	char a[1000];
+	gets(a);
+	printf("%d",length(a));
+}
+
+
+
+// Nhap chuoi s tu ban phim , kiem tra tinh doi xung cua chuoi vua nhap
+// xem i == n-i-1 --> doi xung
+#include <stdio.h>
+#include <string.h>
+int doiXung(char a[])
+{
+	for(int i=0;i<strlen(a);i++)
+	{
+		if(a[i]!=a[strlen(a)-i-1])
+		return 0;
+	}
+	return 1;
+}
+int main()
+{
+	char a[1000];
+	gets(a);
+	if(doiXung(a)==1)
+	{
+		printf("doi xung");
+	}else
+	{
+		printf("khong doi xung");
+	}
+}
+
+
+//nhap vao 1 chuoi va 1 ki tu , kiem tra ky tu co trong chuoi hay khong, neu co dua ra so lan xuat hien cua ki tu do trong chuoi
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+int main()
+{
+	char a[1000];
+	gets(a);
+	char c;
+	scanf("%c", &c);
+	int cnt=0;
+	for(int i=0;i<strlen(a);i++)
+	{
+		if(a[i]==c) // c la ki tu nen dung luon khong can ''
+		{
+			cnt++;
+		}
+		else{
+			continue;
+		}
+	}
+	if(cnt>0 ) {
+	printf("%d",cnt);
+}
+	else if(cnt==0)   printf("khong xuat hien ki tu");
+ } 
+ 
+ // chuyen chuoi nhap tu ban phim thanh chu viet hoa, viet thuong va viet hoa moi chu cai dau moi tu
+ #include <stdio.h>
+ #include <string.h>
+ #include <ctype.h>
+// void vietHoa(char a[])
+// {
+// 	for(int i=0;i<strlen(a);i++)
+// 	{
+// 		a[i]= toupper(a[i]);
+//	 }
+//	 printf("%s",a);
+// }
+// void vietThuong(char a[])
+// {
+// 	for(int i=0;i<strlen(a);i++)
+// 	{
+// 		a[i]= tolower(a[i]);
+//	 }
+//	 printf("%s",a);
+// }
+ void vietHoaDau(char a[])
+ {
+ 	for(int i=0; a[i]!='\0';i++)
+ 	{
+ 		if(a[i]>='A' && a[i]<='Z' )
+ 		{
+ 			a[i]+=32;
+		 }
+		 if(a[i-1]=' ' || i==0)    // ki tu dau tien va ki tu sau dau cach --> viet hoa
+		 {
+		 	if(a[i]>='a' && a[i]<='z')
+		 	{
+		 		a[i]-=32;
+			 }
+		 }
+	 }
+	 printf("%s",a);
+ }
+ int main()
+ {
+ 	char a[1000];
+ 	gets(a);
+// 	vietHoa(a);
+// 	printf("\n");
+// 	vietThuong(a);
+// 	printf("\n");
+ 	vietHoaDau(a);
+ }
+ //nhap vao 1 danh sach sinh vien va hien thi danh sach sinh vien ra man hinh
+ #include <stdio.h>
+
+int main()
+{
+    char arr[1000][50];
+    int n;
+    printf("Nhap so luong sinh vien: ");
+    scanf("%d", &n);
+    getchar(); // trả về kí tự được đọc dưới dạng unsigned char được ép kiểu thành 1 int or EOF or lỗi
+    for(int i = 1; i <= n; i++)
+    {
+        printf("Ten sinh vien thu %d la: ", i);
+        fgets(arr[i], sizeof arr[i], stdin);
+    }
+    printf("\n");
+    for(int i = 1; i <= n; i++)
+    {
+        printf("Ten sinh vien thu %d la: %s", i, arr[i]);
+    }
+}
+
+
+//xoay ki tu trong chuoi C
+#include <stdio.h>
+char* pop_str( char* a, char chr, char* b)
+{
+	int a_cnt;
+	int b_cnt=0
+	//so sanh tung ki tu cua a voi c
+	for(a_cnt=0; a[a_cnt]!='\0'; ++a_cnt)
+	{
+		//nếu kí tự khác c thì lấy ra và thêm vào két quả
+		if(a[a_cnt ]!=) 
+	}
+}
