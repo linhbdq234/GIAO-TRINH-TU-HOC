@@ -1,0 +1,1084 @@
+ 1 TÁCH ĐÔI VÀ TÍNH TỔNG
+ Cho một số nguyên dương không quá 200 chữ số. Mỗi bước tách số nguyên thành hai nửa: nửa đầu là n/2 chữ số đầu tiên, nửa sau là phần còn lại (trong đó n là số chữ số của số ban đầu, nếu n lẻ thì phép chia 2 sẽ tính phần nguyên). Sau đó thực hiện tính tổng của hai nửa này.
+
+Lặp lại các bước trên cho đến khi kết quả chỉ còn là số có 1 chữ số.
+
+Hãy thực hiện tính toán và in kết quả của từng bước.
+
+Input
+
+Chỉ có một số nguyên dương không quá 200 chữ số.
+
+Output
+
+Ghi ra kết quả từng bước, mỗi bước trên một dòng. Dừng lại khi kết quả chỉ còn 1 chữ số.
+
+Ví dụ
+
+Input
+123456
+Output:
+579
+
+84
+
+12
+
+3
+
+ 
+ 
+ 
+ // BẢN GHI 
+ Cho một tập N bộ 3 số là các cạnh của một tam giác.
+Định nghĩa kiểu dữ liệu bản ghi có thẻ là tamgiac với thành phần trường dữ liệu là a, b, c là ba cạnh
+Xây dựng hàm nhập thông tin cho bản ghi tam giác
+Xây dựng hàm tính diện tích cho tam giác
+Xây dựng hàm in thông tin tam giác theo định dạng (a,b,c) ra màn hình
+Xây dựng hàm ghi tập bản ghi tam giác vào file có tên FPLSP22GxxmsvTG.fpl, file nhị phân.
+Áp dụng các hàm xây dựng được, đọc thông tin vào cho các bản ghi,
+in ra lần lượt các bộ cạnh tam giác theo thứ tự diện tích tăng dần
+
+Vào:
+Gồm 02 dòng, dòng đầu là số bộ số, các dòng tiếp theo là ba bộ số tương ứng là ba cạnh của tam giác, cách nhau bởi dấu cách
+Ra:
+Các dòng tương ứng các cạnh của tam giác theo thứ tự diện tích tăng dần
+
+Ví dụ:
+In:
+2
+9 9 9
+3 4 5
+Out:
+3 4 5
+9 9 9
+
+  //TỔNG ƯỚC SỐ
+  Cho N số nguyên. Nhiệm vụ của bạn là phân tích các số nguyên đã cho dưới dạng tích của các thừa số nguyên tố, sau đó tính tổng các ước số nguyên tố này.
+
+Input:
+
+Dòng đầu tiên số nguyên N (1 ≤ N ≤ 106).
+N dòng tiếp theo, mỗi dòng gồm một số nguyên có giá trị không vượt quá 2*106.
+Output: 
+
+In ra một số nguyên là đáp án tìm được.
+
+Ví dụ:
+
+Input:
+
+5 
+
+7
+
+9 
+
+10 
+
+13 
+
+100
+Output: 
+47
+
+
+
+//TỔNG CHỮ SỐ CHIA HẾT CHO 5
+Viết chương trình nhập vào số nguyên dương n không quá 5 chữ số. Thực hiện liệt kê các số nguyên tố nhỏ hơn n và thỏa mãn có tổng các chữ số chia hết cho 5. Có bao nhiêu số như vậy.
+
+Input
+
+Chỉ có một dòng ghi số n.
+
+Output
+
+Gồm hai dòng: dòng đầu liệt kê các số thỏa mãn, dòng thứ 2 ghi số lượng các số tìm được.
+
+Ví dụ:
+
+Input
+100
+Output
+5 19 23 37 41 73
+
+6
+
+
+//SỐ THUẬN NGHỊCH KHÔNG CÓ CHỮ SỐ 9
+Viết chương trình nhập vào số N không quá 4 chữ số, thực hiện liệt kê các số thuận nghịch lớn hơn 1 và nhỏ hơn N thỏa mãn không chứa chữ số 9. Có bao nhiêu số như vậy.
+
+Input
+
+Chỉ có một dòng ghi số n. 
+
+Output
+
+Gồm hai dòng: dòng đầu liệt kê các số thỏa mãn, dòng thứ 2 ghi số lượng các số tìm được. 
+
+Ví dụ:
+
+Input
+100
+Output
+2 3 4 5 6 7 8 11 22 33 44 55 66 77 88
+15
+
+
+//TRỘN HAI DÃY VÀ SẮP XẾP
+Cho hai dãy số nguyên dương A và B không quá 100 phần tử, các giá trị trong dãy không quá 30000 và số phần tử của hai dãy bằng nhau.  Hãy trộn hai dãy với nhau sao cho dãy A được đưa vào các vị trí có chỉ số chẵn, dãy B được đưa vào các vị trí có chỉ số lẻ. Đồng thời, dãy A được sắp xếp tăng dần, còn dãy B được sắp xếp giảm dần.     (Chú ý: chỉ số tính từ 0)
+
+Input: Dòng 1 ghi số bộ test. Với mỗi bộ test:  dòng đầu tiên ghi số n. Dòng tiếp theo ghi n số nguyên dương của dãy A.  Dòng tiếp theo ghi n số nguyên dương của dãy B
+
+Output: Với mỗi bộ test, đưa ra thứ tự bộ test và dãy kết quả.
+
+Ví dụ:
+
+Input
+2
+
+5
+
+1 2 3 1 2
+
+3 1 2 3 1
+
+4
+
+4 2 7 1
+
+5 6 2 8
+output
+Test 1:
+
+1 3 1 3 2 2 2 1 3 1
+
+Test 2:
+
+1 8 2 6 4 5 7 2
+
+
+
+//DÃY CON LIÊN TIẾP CÓ TỔNG LỚN NHẤT
+Cho dãy số A[] gồm có N phần tử. Nhiệm vụ của bạn là hãy tìm một dãy con liên tiếp sao cho tổng các phần tử của chúng là lớn nhất.
+
+Input: Dòng đầu tiên là số lượng bộ test T (T ≤ 10). Mỗi test gồm số nguyên N (1≤ N ≤ 100 000), số lượng phần tử trong dãy số ban đầu. Dòng tiếp theo gồm N số nguyên A[i] (-109 ≤ A[i] ≤ 109).
+
+Output:  Với mỗi test, in ra một số nguyên là đáp án của bài toán trên một dòng.
+
+Ví dụ:
+
+Input
+2
+
+8
+
+-2 -3 4 -1 -2 1 5 -3
+
+5
+
+1 2 3 4 5
+Output
+7
+
+15
+
+Giải thích test 1: 4 + (-1) + (-2) + 1 + 5 = 7
+
+//DÃY ƯU THẾ
+Cho dãy A[] chỉ bao gồm các số nguyên dương không quá 105 nhưng không biết trước số phần tử của dãy. Người ta gọi dãy A[] là dãy ưu thế nếu thỏa mãn 1 trong 2 điều kiện sau đây:
+
+Dãy gọi là ưu thế chẵn nếu số phần tử của dãy là chẵn và số lượng số chẵn trong dãy nhiều hơn số lượng số lẻ.
+Dãy gọi là ưu thế lẻ nếu số phần tử của dãy là lẻ và số lượng số lẻ trong dãy nhiều hơn số lượng số chẵn.
+Hãy kiểm tra xem dãy A[] có phải là dãy ưu thế hay không.
+
+Dữ liệu vào
+
+Dòng đầu ghi số bộ test, không quá 10
+Mỗi bộ test là một dãy các số nguyên dương (không quá 104) và có không quá 200 số, các số cách nhau 1 khoảng trống, không biết trước số lượng phần tử.
+Kết quả
+
+Nếu dãy A[] thỏa mãn là dãy ưu thế thì in ra YES, nếu không in ra NO
+Ví dụ
+
+Input
+2
+
+11 22 33 44 55 66 77
+
+23 34 45 56 67 78 89 90 121 131 141 151 161 171
+Output
+YES
+
+NO
+
+
+//XẾP HÀNG
+Tại sân bay, mọi người đang làm thủ tục để check in. Có tất cả N vị khách. Vị khách thứ i tới làm thủ tục tại thời điểm T[i] và cần D[i] thời gian để check-in xong.
+
+Các bạn hãy xác định xem thời điểm nào tất cả các vị khách làm xong thủ tục để lên máy bay?
+
+Input
+
+Dòng đầu tiên là số nguyên dương N (N ≤ 100).
+
+N dòng tiếp theo, mỗi dòng gồm 2 số nguyên cho biết thời điểm đến của vị khách thứ i và thời gian vị khách này làm xong thủ tục check in. Các giá trị này không vượt quá 106.
+
+Output
+
+In ra đáp án tìm được.
+
+Ví dụ:
+
+Input
+3
+
+2 1
+
+8 3
+
+5 7
+Output
+15
+Giải thích test:
+
+Vị khách đầu tiên tới lúc t = 2 và mất 1 đơn vị thời gian để check in. Vị khách thứ 2 tới lúc t = 5, và làm xong thủ tục tại thời điểm t = 12. Vị khách thứ 3 tới lúc t = 8, nhưng phải chờ tới thời điểm t = 12 để check in, hoàn thành tại thời điểm t = 15.
+ 
+ 
+ 
+ //CHIẾU SÁNG
+ Chính quyền thành phố Highland đã lên kế hoạch để sửa tuyến đường ven biển sau khi được sửa chữa tạm thời. Tuyến đường có chiều dài bằng N, và hiện tại có M chiếc đèn cao áp đang hoạt động. Tầm chiếu sáng của mỗi chiếc đèn là K, nghĩa là tại vị trí X nếu được dựng đèn, nó sẽ chiếu sáng cho khu vực từ X – K tới X + K.
+
+Các bạn hãy thử tính xem cần dựng thêm ít nhất bao nhiêu đèn để tuyến đường có thể được chiếu sáng hoàn toàn?
+
+Input:
+
+Dòng đầu tiên là chiều dài của tuyến đường N (1 ≤ N ≤ 1000).
+
+Tiếp theo là số lượng chiếc đèn đang hoạt động, M (M ≤ N).
+
+Dòng tiếp theo chứa số nguyên K (0 ≤ K ≤ N).
+
+Dòng cuối chứa M số nguyên, lần lượt là vị trí của những chiếc đèn đang có.
+
+Output: 
+
+In ra một số nguyên là đáp án đáp án tìm được.
+
+ 
+
+Ví dụ:
+
+Test 1
+Input:
+
+6
+
+2
+
+2
+
+1 5
+
+ 
+
+Output:
+
+0
+Test 2
+Input:
+
+15
+
+3
+
+10
+
+1 2 3
+
+ 
+
+Output:
+
+1
+
+
+//LOẠI BỎ HÀNG VÀ CỘT CÓ TỔNG LỚN NHẤT RA KHỎI MA TRẬN
+Cho một ma trận cấp M*N chỉ bao gồm các số nguyên dương không quá 1000. Hãy viết chương trình trước hết loại bỏ hàng có tổng lớn nhất sau đó tính toán lại để loại tiếp cột có tổng lớn nhất ra khỏi ma trận.     
+
+Input: Dòng đầu tiên ghi số bộ test.  Mỗi bộ test viết trên một dòng hai số N và M lần lượt là số hàng và số cột của ma trận (2<N,M<10). Tiếp thep là N dòng ghi các số của ma trận.
+
+Output:Mỗi bộ test viết ra thứ tự bộ test, sau đó là ma trận sau khi tính toán. 
+
+Ví dụ
+
+Input
+1
+3 3
+1 2 4
+3 4 0
+6 3 5
+Output
+Test 1:
+
+1 4
+3 0
+
+//TỔNG CÁC SỐ NGUYÊN TỐ THUỘC TAM GIÁC TRÊN
+Viết chương trình nhập ma trận A là ma trận vuông cấp n (không quá 50). Tìm tổng các phần tử là số nguyên tố thuộc tam giác trên.
+
+INPUT
+- Dòng đầu tiên là cấp của ma trận
+- Các dòng tiếp theo là các phần tử của ma trận
+OUTPUT
+- Ghi ra kết quả của chương trình
+
+ 
+
+Ví dụ: 
+
+
+INPUT
+4
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+OUTPUT
+23
+
+//TÍCH MA TRẬN CHÉO
+Cho một số nguyên dương N không quá 20. Ma trận vuông A cấp N*N được tạo theo mẫu trong bảng dưới. Viết chương trình tính tích của A với chuyển vị của A.
+
+Với N = 4
+1 0 0 0
+1 2 0 0
+1 2 3 0
+1 2 3 4
+
+Với N = 5
+1 0 0 0 0
+1 2 0 0 0
+1 2 3 0 0
+1 2 3 4 0
+1 2 3 4 5
+
+    
+
+Input: Dòng 1 ghi số bộ test. Mỗi bộ test ghi trên một dòng số N (1<N<20).
+
+Output:           Ghi thứ tự bộ test, sau đó là N hàng ghi ma trận kết quả. Tiếp theo là một dòng trống.  
+
+Ví dụ
+
+Input
+
+Output
+
+1
+
+4
+
+Test 1:
+
+1 1 1 1
+
+1 5 5 5
+
+1 5 14 14
+
+1 5 14 30
+
+ // MA TRẬN XOẮN ỐC NGƯỢC
+ Ma trận xoáy ốc ngược cấp N là ma trận vuông có N*N phần tử. Các số được điền vào ma trận trận theo chiều kim đồng hồ theo thứ tự giảm dần về 1.
+
+Dữ liệu vào
+
+Dòng 1 ghi số bộ test
+Mỗi bộ test ghi số N (1<N<20). 
+Kết quả
+
+            Ghi ra thứ tự bộ test và ma trận xoáy ốc ngược tương ứng
+
+Ví dụ:
+
+Input
+1
+
+3
+Output
+Test 1:
+
+9 8 7
+
+2 1 6
+
+
+//MA TRẬN XOẮN ỐC NGUYÊN TỐ
+Ma trận xoắn ốc nguyên tố cấp N là ma trận vuông có N*N phần tử. Các số được điền vào ma trận theo chiều kim đồng hồ đều là các số nguyên tố từ nhỏ đến lớn.
+
+Dữ liệu vào
+
+Dòng 1 ghi số bộ test
+Mỗi bộ test ghi số N (1<N<20). 
+Kết quả
+
+            Ghi ra thứ tự bộ test và ma trận xoắn ốc nguyên tố tương ứng
+
+Ví dụ:
+
+Input
+1
+
+3
+Output
+Test 1:
+
+ 2  3  5
+
+19 23  7
+
+17 13 11
+
+3 4 5
+
+
+//TÌM HÀNG NHIỀU SỐ NGUYÊN TỐ NHẤT
+Viết chương trình nhập vào ma trận vuông cấp n (1 < n < 30) chỉ bao gồm các số nguyên dương không quá 1000.
+
+Thực hiện tìm hàng có nhiều phần tử là số nguyên tố nhất. Nếu có nhiều hơn một hàng thỏa mãn thì in ra hàng đầu tiên.
+
+
+INPUT
+- Dòng đầu tiên là cấp của ma trận
+- Các dòng tiếp theo là các phần tử của ma trận
+OUTPUT
+- Dòng đầu tiên là số thứ tự hàng thỏa mãn
+- Dòng thứ hai liệt kê các phần tử thỏa mãn
+
+ 
+
+Ví dụ:
+INPUT
+4
+8 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+OUTPUT
+1
+2 3
+
+//SỐ LỚN NHẤT TRONG BẢNG
+Cho một bảng hình chữ nhật kích thước vô hạn. Ban đầu, tất cả các ô đều có giá trị bằng 0.
+
+Có N phép thực hiện, mỗi bước, bạn được phép tăng giá trị của hình chữ nhật con từ ô (1, 1) tới ô (a, b) lên 1 đơn vị.
+
+Sau N bước, số lớn nhất trong bảng là X. Nhiệm vụ của bạn là hãy đếm số lần xuất hiện của X?
+
+Input:
+
+Dòng đầu tiên là số nguyên N (1 ≤ N ≤ 100).
+
+N dòng tiếp theo, mỗi dòng gồm 2 số nguyên a và b mô tả một bước (1 ≤ a, b ≤ 10^6).
+
+Output: 
+
+In ra số lần xuất hiện của số lớn nhất trong bảng.
+
+Ví dụ:
+
+Input:
+3
+
+2 3
+
+3 7
+
+4 1
+
+ 
+Output:
+2
+
+ 
+
+ 
+
+Giải thích test: Trạng thái cuối cùng của hình chữ nhật là:
+
+1 0 0 0 0 0 0
+
+2 1 1 1 1 1 1
+
+3 2 2 1 1 1 1
+
+3 2 2 1 1 1 1
+
+
+
+//BIỂN SỐ ĐẸP
+Biển số xe máy được quy định gồm các thành phần:
+
+Hai chữ số đầu là mã quản lý theo tỉnh – thành phố (ví dụ mã của Hà Nội là 29 đến 31)
+Tiếp theo là dấu gạch ngang, sau đó là một chữ cái in hoa (từ A đến Z) và một chữ số. Cặp chữ cái và chữ số này được cấp theo khu vực quận – huyện.
+Tiếp theo là một dãy 5 số gồm 2 cụm: 3 chữ số đầu và hai chữ số sau, phân tách bởi dấu chấm.
+Thông thường, người ta chỉ quan tâm đến 5 chữ số cuối. Giả sử các trường hợp sau được coi là đẹp:
+
+Cả 5 chữ số được sắp theo thứ tự tăng chặt từ trái qua phải.
+Cả 5 chữ số đều bằng nhau
+Ba chữ số đầu bằng nhau và hai chữ số cuối bằng nhau
+Cả 5 chữ số đều là 6 và/hoặc 8 (số lộc phát).
+Theo quy tắc trên, các biển số sau được coi là đẹp:
+
+29-T1 123.79
+29-T1 555.55
+29-T1 222.33
+29-T1 686.88
+Và các biển số sau không đẹp:
+
+29-T1 123.33
+29-T1 555.54
+29-T1 606.88
+Viết chương trình kiểm tra xem các biển số xe có đẹp hay không.
+
+Dữ liệu vào
+
+Dòng đầu ghi số bộ test, không quá 50
+Mỗi bộ test là một biển số. Dữ liệu vào đảm bảo biển số được viết đúng quy định. 
+Kết quả
+
+In ra kết quả kiểm tra với từng bộ test
+Ví dụ
+
+Input
+7
+
+29-T1 123.45
+
+29-T1 555.55
+
+29-T1 222.33
+
+29-T1 686.88
+
+29-T1 123.33
+
+29-T1 555.54
+
+29-T1 606.88
+Output
+YES
+
+YES
+
+YES
+
+YES
+
+NO
+
+NO
+
+NO
+
+
+//SỐ ĐẦY ĐỦ
+Cho một số nguyên dương lớn có nhiều hơn 20 chữ số nhưng không quá 1000 chữ số. Hãy kiểm tra xem số đó có đầy đủ tất cả các chữ số từ 0 đến 9 hay không.
+
+Dữ liệu vào
+
+Dòng đầu ghi số bộ test, không quá 10
+Mỗi bộ test là một dãy ký tự có độ dài không quá 1000, không có khoảng trống
+Kết quả
+
+Nếu dữ liệu vào không phải là một số nguyên hợp lệ (có ký tự không phải số hoặc bắt đầu bằng chữ số 0) thì in ra INVALID
+Nếu dữ liệu vào thỏa mãn đầy đủ thì in ra YES, nếu không in ra NO
+Ví dụ
+
+Input
+3
+
+01234aa32432432432534545b987978
+
+123444444444444566666666667890
+
+324562783924723543243243242354354354333234324
+Output
+INVALID
+
+YES
+
+NO
+
+
+//CHUẨN HÓA XÂU HỌ TÊN 2
+Các cán bộ, giảng viên PTIT khi tham gia hội nghị quốc tế sẽ được viết lại xâu họ tên theo dạng chuẩn trong đó họ được viết sau cùng, phân tách với phần tên đệm và tên bởi dấu phẩy. Các chữ cái của họ đều viết hoa.
+
+Cho trước các xâu họ tên (có thể không chuẩn). Hãy đưa về dạng chuẩn tương ứng.
+
+Input:
+
+Dòng 1 ghi số N là xâu họ tên trong danh sách
+N dòng tiếp theo ghi lần lượt các xâu họ tên (không quá 50 ký tự)
+Output: Ghi ra các xâu chuẩn.
+
+Ví dụ:
+
+Input
+4
+
+    nGUYEn    quaNG   vInH  
+
+   tRan   thi THU    huOnG
+
+   nGO   quoC  VINH
+
+ lE            tuAn    aNH
+Output
+Quang Vinh, NGUYEN
+
+Thi Thu Huong, TRAN
+
+Quoc Vinh, NGO
+
+Tuan Anh, LE
+
+
+//TẬP TỪ RIÊNG CỦA HAI XÂU 1
+Cho hai chuỗi ký tự S1 và S2 độ dài không quá 100.
+
+Hãy viết chương trình tìm các từ chỉ xuất hiện trong S1 mà không xuất hiện trong S2. Chú ý: mỗi từ chỉ liệt kê 1 lần và sắp xếp theo thứ tự xuất hiện trong từ điển
+Input:
+
+Có hai dòng, dòng thứ nhất ghi xâu S1, dòng thứ 2 ghi xâu S2.
+
+Output:
+
+Ghi lần lượt các từ thỏa mãn trên một dòng.
+
+Ví dụ:
+
+Input
+abc ab ab ab abcd
+
+ab abc
+Output
+abcd
+
+//TÂP TỪ RIÊNG CỦA HAI XÂU 2
+Cho hai xâu ký tự S1 và S2. Hãy viết chương trình tìm các từ chỉ xuất hiện trong S1 mà không xuất hiện trong S2. Chú ý: mỗi từ chỉ liệt kê 1 lần.
+
+Input: Dòng 1 ghi số bộ test. Mỗi bộ test gồm 2 dòng, mỗi dòng ghi một xâu ký tự độ dài không quá 200, chỉ bao gồm các ký tự viết thường và các khoảng trống. 
+
+Output:          Với mỗi bộ test ghi ra các từ có trong S1 mà không có trong S2. Các từ được ghi theo thứ tự từ điển.
+
+Ví dụ:
+
+Input
+2
+
+abc ab ab ab abcd
+
+ab abc
+
+aaa xyz ab zzz abc dd dd abc
+
+xyz dd ttt sas cdc
+Output
+abcd
+
+aaa ab abc zzz
+
+//ĐỊA CHỈ EMAIL PTIT
+Địa chỉ email của cán bộ PTIT được cấp theo nguyên tắc ghép tên với chữ cái đầu tiên của họ và tên đệm. Viết chương trình cho phép tạo các địa chỉ email theo tên cán bộ(có thể không chuẩn).
+
+Input:
+
+Chỉ có một dòng ghi xâu họ tên (độ dài không quá 50)
+
+Output:
+
+Ghi ra kết quả.
+
+Ví dụ:
+
+Input
+ngUYEN van nam
+Output
+nvnam@ptit.edu.vn
+
+
+//SỐ ƯU THẾ
+Cho một số nguyên dương lớn có nhiều hơn 20 chữ số nhưng không quá 1000 chữ số. Một số nguyên dương được coi là “số ưu thế chẵn” nếu số chữ số của nó là chẵn và số chữ số chẵn nhiều hơn số chữ số lẻ.
+
+Một số nguyên dương được coi là “số ưu thế lẻ” nếu số chữ số của nó là lẻ và số chữ số lẻ nhiều hơn số chữ số chẵn.
+
+Hãy kiểm tra xem số đó có phải là số ưu thế (chẵn hoặc lẻ) hay không. Chú ý: trường hợp số lượng chữ số chẵn và số lượng chữ số lẻ bằng nhau thì không được coi là số ưu thế.
+
+Dữ liệu vào
+
+Dòng đầu ghi số bộ test, không quá 10
+Mỗi bộ test là một dãy ký tự có độ dài không quá 1000, không có khoảng trống
+Kết quả
+
+Nếu dữ liệu vào không phải là một số nguyên hợp lệ (có ký tự không phải số hoặc bắt đầu bằng chữ số 0) thì in ra INVALID
+Nếu dữ liệu vào thỏa mãn là số ưu thế thì in ra YES, nếu không in ra NO
+Ví dụ
+
+Input
+3
+
+01234aa32432432432534545b987978
+
+1234567890123456789000
+
+999999999999999999999999999999
+Output
+INVALID
+
+YES
+
+NO
+
+
+//XÓA TỪ TRONG XÂU
+Cho trước một xâu ký tự S1 chỉ bao gồm các chữ cái và khoảng trống cùng một từ S2. Hãy tìm xem S2 có xuất hiện trong S1 hay không. Nếu có loại bỏ tất cả những lần xuất hiện của S2 trong S1. Chú ý: tìm S2 trong S1 theo kiểu không phân biệt chữ hoa chữ thường
+
+Input:  Dòng 1 ghi số bộ test. Mỗi bộ test ghi trên hai dòng: Dòng đầu ghi xâu ký tự S1, độ dài không quá 200. Dòng thứ 2 ghi từ S2 (không quá 20 ký tự)
+Output: Với mỗi bộ test ghi ra thứ tự bộ test và xâu kết quả sau khi đã xóa.
+
+Ví dụ:
+
+Input
+2
+
+Abc ddd abdc aaa bbb abc ddD XY
+aBc
+ACHDNC XXXX YYYY ABC ABC XXXX
+XxXx
+Output
+Test 1: ddd abdc aaa bbb ddD XY
+Test 2: ACHDNC YYYY ABC ABC
+ 
+//HIỆU HAI SỐ NGUYÊN LỚN
+Viết chương trình tính hiệu của hai số nguyên lớn. Chú ý: luôn luôn lấy số lớn hơn trừ đi số nhỏ hơn.
+
+Input:
+
+Dòng 1 ghi số bộ test
+Mỗi bộ test gồm 2 dòng, mỗi dòng ghi một số không quá 1000 chữ số.. 
+Output:
+
+      Với mỗi bộ test ghi ra kết quả tính toán tương ứng
+
+Ví dụ:
+
+Input
+3
+456
+789
+100000000000000000000000000001
+99
+123456789012345678901234567890
+1234567890
+Output
+333
+99999999999999999999999999902
+123456789012345678900000000000
+
+//TÌM TỪ THUẬN NGHỊCH DÀI NHẤT
+Cho một văn bản. Hãy tìm ra từ thỏa mãn tính chất thuận nghịch có độ dài lớn nhất trong và cho biết từ đó xuất hiện bao nhiêu lần. Nếu có nhiều từ cùng có độ dài lớn nhất thì in ra tất cả các từ đó theo thứ tự xuất hiện.
+
+
+Input: Văn bản không quá 1000 từ.
+
+Output:
+
+Ghi ra trên một dòng từ thuận nghịch có độ dài lớn nhất và số lần xuất hiện của nó. Nếu có nhiều từ cùng có độ dài lớn nhất thì các từ được liệt kê theo thứ tự xuất hiện ban đầu.
+
+
+Ví dụ:
+
+Input
+AAA BAABA HDHDH ACBSD SRGTDH DDDDS
+DUAHD AAA AD DA HDHDH AAA AAA AAA AAA
+DDDAS HDHDH HDH AAA AAA AAA AAA AAA
+AAA AAA AAA
+DHKFKH DHDHDD HDHDHD DDDHHH HHHDDD
+TDTD
+Output
+HDHDH 3
+
+//XÂU ĐỐI XỨNG 1
+Cho trước một xâu S.  Bạn hãy thay đổi đúng 1 kí tự, sao cho xâu mới thu được là một xâu đối xứng.
+
+Input: Dòng đầu tiên là số lượng bộ test T (T ≤  20). Mỗi test ghi trên một dòng 1 xâu S có độ dài không quá 20 kí tự.
+
+Output: Với mỗi test, in ra “YES” nếu có thể biến đổi xâu S thành xâu đối xứng, in ra “NO” trong trường hợp ngược lại.
+
+Ví dụ:
+
+Input:
+3
+
+abccaa
+
+abbcca
+
+abcda
+Output
+YES
+
+NO
+
+YES
+
+//SẮP XẾP DANH SÁCH MẶT HÀNG
+Hãy sắp xếp danh sách các mặt hàng theo lợi nhuận giảm dần. Mỗi mặt hàng gồm các thông tin: Mã mặt hàng (là một số nguyên, tự động tăng, tính từ 1); Tên mặt hàng, nhóm hàng: là các xâu ký tự; Giá mua, giá bán: là các số thực (không quá 9 chữ số)
+
+Input:
+
+Dòng đầu chứa số mặt hàng. Mỗi mặt hàng viết trên 4 dòng: Dòng 1: Tên mặt hàng. Dòng 2: Nhóm hàng. Dòng 3: Giá mua. Dòng 4: Giá bán
+
+Output: Ghi ra danh sách mặt hàng đã sắp xếp theo lợi nhuận giảm dần (lợi nhuận tính bằng giá bán trừ đi giá mua). Mỗi mặt hàng viết trên một dòng gồm: mã, tên, nhóm hàng và lợi nhuận. Các thông tin cách nhau đúng 1 khoảng trống. Lợi nhuận viết với 2 chữ  số sau dấu phẩy. 
+
+Ví dụ:
+
+Input
+3
+
+May tinh SONY VAIO
+
+Dien tu
+
+16400
+
+17699
+
+Tu lanh Side by Side
+
+Dien lanh
+
+18300
+
+25999
+
+Banh Chocopie
+
+Tieu dung
+
+27.5
+37
+Output
+2 Tu lanh Side by Side Dien lanh 7699.00
+
+1 May tinh SONY VAIO Dien tu 1299.00
+
+3 Banh Chocopie Tieu dung 9.50
+
+
+//TÌM THỦ KHOA CỦA KỲ THI
+Cho danh sách thí sinh gồm các thông tin: Mã thí sinh: là một số nguyên, tự động tăng, tính từ 1; Tên thí sinh, ngày sinh, điểm môn 1, điểm môn 2, điểm môn 3. Hãy tìm thủ khoa trong danh sách đó. Nếu có nhiều thí sinh có điểm bằng nhau và đều cao nhất thì in ra tất cả thí sinh đó theo mã tăng dần.
+
+Input:
+
+Dòng đầu chứa số thí sinh. Mỗi thí sinh viết trên 3 dòng: Dòng 1: Tên thí sinh, Dòng 2: Ngày sinh, Dòng 3,4,5: 3 điểm thi tương ứng. Các điểm thi đều đảm bảo hợp lệ (từ 0 đến 10).
+
+Output: In ra các thủ khoa của kỳ thi, mỗi thí sinh 1 dòng, gồm mã, tên, ngày sinh và tổng điểm. Chú ý: nếu có nhiều thí sinh bằng điểm nhau và cao nhất thì in ra tất cả thí sinh đó theo thứ tự mã thí sinh tăng dần.
+
+Ví dụ:
+
+Input
+3
+Nguyen Van A
+12/12/1994
+3.5
+7.0
+5.5
+Nguyen Van B
+1/9/1994
+7.5
+9.5
+9.5
+Nguyen Van C
+6/7/1994
+8.5
+9.5
+8.5
+Output
+2 Nguyen Van B 1/9/1994 26.5
+3 Nguyen Van C 6/7/1994 26.5
+
+
+//SẮP XẾP THÍ SINH
+Hãy sắp xếp danh sách thí sinh theo tổng điểm giảm dần.
+
+Mỗi thí sinh gồm các thông tin:
+
+Mã thí sinh: là một số nguyên, tự động tăng. Tính từ 1.
+Tên thí sinh, ngày sinh
+Điểm môn 1, điểm môn 2, điểm môn 3
+Input:
+
+Dòng đầu chứa số thí sinh. Mỗi thí sinh viết trên 3 dòng:
+
+Dòng 1: Tên thí sinh
+Dòng 2: Ngày sinh
+Dòng 3,4,5: 3 điểm thi tương ứng. Các điểm thi đều đảm bảo hợp lệ (từ 0 đến 10).
+Output:
+
+In ra danh sách thí sinh đã sắp xếp theo tổng điểm giảm dần. Nếu 2 thí sinh bằng điểm nhau thì thí sinh nào xuất hiện trước sẽ viết trước.  Mỗi thí sinh viết trên một dòng gồm: mã, tên, ngày sinh và tổng điểm. Các thông tin cách nhau đúng 1 khoảng trống.  Điểm tổng được làm tròn đến 1 số sau dấu phẩy.
+
+Ví dụ
+
+Input
+
+Kết quả
+
+3
+
+Nguyen Van A
+
+12/12/1994
+
+3.5
+
+7.0
+
+5.5
+
+Nguyen Van B
+
+1/9/1994
+
+7.5
+
+9.5
+
+9.5
+
+Nguyen Van C
+
+6/7/1994
+
+4.5
+
+4.5
+
+5.0
+
+2 Nguyen Van B 1/9/1994 26.5
+
+1 Nguyen Van A 12/12/1994 16.0
+
+3 Nguyen Van C 6/7/1994 14.0
+
+//TIẾN HÓA POKEMON
+Rảnh rỗi, Tí đang ngồi chơi Pokemon Go, một game đã không còn mấy thịnh hành. Vì vậy, bắt pokemon dễ như ăn kẹo. Tí bắt được rất nhiều con pokemon và đầu tư mua được một số ít viên đá tiến hóa. Tuy nhiên, mỗi loại đá chỉ dùng được cho một loại pokemon. Với một con pokemon chủng P[i], Tí cần dùng K[i] viên đá để tiến hóa cho nó. Sau khi tiến hóa xong, Tí sẽ thu lại được thêm 2 viên đá nữa.
+
+Không có việc gì làm nên Tí cho đống pokemon của mình tiến hóa hết một lượt. Các bạn hãy tính xem Tí có thể tiến hóa được bao nhiêu con, và loại pokemon nào được tiến hóa nhiều nhất?
+
+Input
+
+Dòng đầu tiên là N (N ≤ ≤ 70), số lượng loại pokemon mà Tí bắt được. Giả sử rằng Tí có vô hạn các con pokemon trong mỗi loại.
+
+2N dòng tiếp theo, mỗi dòng gồm một xâu P[i], là loại pokemon mà Tí có. Tiếp theo là 2 số nguyên K[i] (10 ≤ K[i] ≤ 400) và M[i] (1 ≤ M[i] ≤ 10 000), lần lượt là số lượng viên đá cần để tiến hóa cho một con pokemon loại P[i], và số lượng viên đá loại i mà Tí có.
+
+Output
+
+Dòng đầu tiên in ra tổng số lượng các con pokemon được tiến hóa.
+
+Dòng thứ hai in ra loại pokemon nào được tiến hóa nhiều nhất. Nếu có nhiều đáp án, hãy in ra tên loại pokemon xuất hiện sớm hơn trong danh sách.
+
+Test ví dụ:
+
+Input:
+5
+
+Pidgey
+
+12 36
+
+Ivysaur
+
+10 63
+
+Charmander
+
+35 96
+
+Pikachu
+
+12 32
+
+Squirtle
+
+15 10
+Output
+15
+
+Ivysaur
+Giải thích test: Tí có thể tiến hóa cho 3 con Pidgey, 7 con Ivysaur, 2 con Charmander, 3 con Pikachu và 0 con Quirtle.
+
+//HÌNH VUÔNG NHỎ NHẤT
+Cho 2 hình chữ nhật trên mặt phẳng Oxy. Cần tìm hình vuông có kích thước nhỏ nhất sao cho phủ kín được 2 hình chữ nhật đã cho.
+
+Dữ liệu vào:
+
+2 dòng, mỗi dòng gồm 4 số nguyên lần lượt mô tả điểm trái dưới và phải trên của hình chữ nhật. Các tọa độ có giá trị tuyệt đối không vượt quá 100.
+
+Kết quả: 
+
+In ra diện tích của hình vuông tìm được.
+
+Ví dụ:
+
+Input
+6 6 8 8
+
+1 8 4 9
+Output
+49
+
+//GHÉP HÌNH
+Cho ba hình chữ nhật. Các bạn được phép xoay hình nhưng không được phép xếp chồng lấn lên nhau, hỏi 3 hình chữ nhật đó có thể ghép thành một hình vuông được hay không
+
+Input: Có ba dòng, mỗi dòng ghi hai số nguyên dương là chiều rộng và chiều cao của hình chữ nhật (các số đều không quá 100).
+
+Output: Ghi ra YES nếu có thể tạo thành hình vuông, NO nếu không thể. 
+
+Ví dụ:
+
+Input
+8 2
+
+1 6
+
+7 6
+Output
+YES
+ 
+//BỘI SỐ NHỎ NHẤT
+Cho hai số tự nhiên n, m . Nhiệm vụ của bạn là tìm số nguyên nhỏ nhất chia hết cho n , n+1, .., m.
+
+Input:
+
+Dòng đầu tiên đưa vào T là số lượng bộ test.
+T dòng tiếp theo mỗi dòng đưa vào một bộ test. Mỗi bộ test là 2 số tự nhiên n, m.
+T thỏa mãn ràng buộc: 1≤T≤104; 1≤n, m ≤40
+Output:
+
+Đưa ra kết quả mỗi test theo từng dòng.
+Input
+2
+
+1 3
+
+3 5
+Output
+6 
+
+60
+
+//
